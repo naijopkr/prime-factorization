@@ -4,12 +4,12 @@ def prime_factorization(number):
     prime_number = get_prime_number()
     factors = []
 
-    rest = number
-    while rest != 1:
+    quotient = number
+    while quotient != 1:
         factor_candidate = next(prime_number)
 
-        while rest % factor_candidate == 0:
+        while quotient % factor_candidate == 0:
             factors.append(factor_candidate)
-            rest = rest / factor_candidate
+            quotient = quotient / factor_candidate
 
     return factors
